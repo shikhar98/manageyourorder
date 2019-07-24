@@ -6,6 +6,13 @@ const addorderRouter = require('./routes/addorderRouter');
 const editorderRouter = require('./routes/editorderRouter');
 app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static("public"));
+app.use(bodyParser.json())
+
+// app.post('/', (req,res)=>{
+//     console.log("okie");
+//     console.log(req.body);
+// })
+
 app.use('/', addorderRouter);
 // app.use('/addorder', orderRouter);
 // app.use('/editorder', editorderRouter);
