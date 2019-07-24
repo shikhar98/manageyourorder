@@ -1,9 +1,10 @@
 const express=require('express')
+var bodyParser = require("body-parser");
 const app=express()
 const orderRouter = require('./routes/orderRouter');
 const addorderRouter = require('./routes/addorderRouter');
 const editorderRouter = require('./routes/editorderRouter');
-// app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static("public"));
 app.use('/', addorderRouter);
 // app.use('/addorder', orderRouter);
