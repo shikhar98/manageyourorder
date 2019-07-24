@@ -6,9 +6,9 @@ router.post("/",(req,res)=>{
     // res.send("hello there!")
     // res.status(200).json({status:"ok"})
     res.sendStatus(200)
+    console.log("Hello\n There\n I amm Shikhar");
+    console.log(req.body);
     res.end();
-    console.log("Hello\n There\n I amm Shikhar")
-    console.log(req.body)
 })
 router.get("/",(req,res)=>{
     res.sendStatus(200)
