@@ -6,18 +6,10 @@ orders=require("../Controllers/orders");
 var bodyParser = require("body-parser");
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json())
-router.use(express.static("public"));
-router.get("/",(req,res)=>{
-    listoforders=[]
-    orders.find({},(err,result)=>{
-        if(err) throw err;    
-        listoforders=result;
-        // console.log(listoforders);
-    })
+router.get("/:id",(req,res)=>{
+    orders.remove({id:req.params.id})
     .then(()=>{
-        // console.log(listoforders);
-        res.render("index",{orders:listoforders})
+        res.redirect("/")
     })
 });
-
 module.exports=router;

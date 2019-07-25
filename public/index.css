@@ -1,0 +1,10 @@
+.blue{
+    background-color:cadetblue;
+    color: beige;
+}
+.card{
+    padding-right:100px;
+    padding-left:100px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
