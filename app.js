@@ -14,6 +14,6 @@ app.use('/addorder', addorderRouter);
 app.use('/', orderRouter);
 app.use('/editorder', editorderRouter);
 app.use('/deleteorder', deleteorderRouter);
-app.listen( 3000 || process.env.PORT,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Server is running")
 });
